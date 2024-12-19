@@ -2,6 +2,7 @@
 % Fitness Goals
 goal(weight_loss).
 goal(muscle_and_strength_building).
+goal(general_fitness).
 
 % Fitness Level
 level(beginner).
@@ -262,7 +263,7 @@ generate_plan(general_fitness, advanced, equipment) :-
 
 %User Interaction
 ask_goal(Goal) :-
-    write('What is your fitness goal (Options: weight_loss, muscle_and_strength_building)?'), nl,
+    write('What is your fitness goal (Options: weight_loss, muscle_and_strength_building,general_fitness)?'), nl,
     read(Input),
     ( goal(Input) -> Goal = Input
     ; write('Invalid goal! Please try again.'), nl, ask_goal(Goal)
@@ -276,7 +277,7 @@ ask_level(Level) :-
     ).
 
 ask_equipment(Equipment) :-
-    write('Do you have access to equipments? (Options: no_equipment, equipment?'), nl,
+    write('Do you have access to equipments (Options: no_equipment, equipment)?'), nl,
     read(Input),
     ( equipment(Input) -> Equipment = Input
     ; write('Invalid equipment! Please try again.'), nl, ask_equipment(Equipment)

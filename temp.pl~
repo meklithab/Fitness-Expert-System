@@ -1,4 +1,4 @@
-
+%----------------------Facts-------------------%
 % Fitness Goals
 goal(weight_loss).
 goal(muscle_and_strength_building).
@@ -128,7 +128,36 @@ generate_plan(muscle_and_strength_building, advanced, no_equipment) :-
     write('Fri: Rest day'), nl,
     write('Sat: 4 sets * 15 '), random_exercise(strength, no_equipment, Exercise4), write(Exercise4), nl,
     write('Sun: Rest day'), nl.
-
+% general_fitness , beginner , noequipment
+generate_plan(general_fitness, beginner, no_equipment) :-
+    write('General Fitness - Beginner - No Equipment'), nl,
+    write('Mon: 20min '), random_exercise(cardio, no_equipment, Exercise1), write(Exercise1), nl,
+    write('Tue: 2 sets * 15 '), random_exercise(strength, no_equipment, Exercise2), write(Exercise2), nl,
+    write('Wed: Rest day'), nl,
+    write('Thu: 2 sets * 15 '), random_exercise(strength, no_equipment, Exercise3), write(Exercise3), nl,
+    write('Fri: Rest day'), nl,
+    write('Sat: 20min '), random_exercise(cardio, no_equipment, Exercise4), write(Exercise4), nl,
+    write('Sun: Rest day'), nl.
+% general_fitness , intermediate , noequipment
+generate_plan(general_fitness, intermediate, no_equipment) :-
+    write('General Fitness - Intermediate - No Equipment'), nl,
+    write('Mon: 30min '), random_exercise(cardio, no_equipment, Exercise1), write(Exercise1), nl,
+    write('Tue: 3 sets * 15 '), random_exercise(strength, no_equipment, Exercise2), write(Exercise2), nl,
+    write('Wed: Rest day'), nl,
+    write('Thu: 3 sets * 15 '), random_exercise(strength, no_equipment, Exercise3), write(Exercise3), nl,
+    write('Fri: Rest day'), nl,
+    write('Sat: 30min '), random_exercise(cardio, no_equipment, Exercise4), write(Exercise4), nl,
+    write('Sun: Rest day'), nl.
+% general_fitness , advanced , noequipment
+generate_plan(general_fitness, advanced, no_equipment) :-
+    write('General Fitness - Advanced - No Equipment'), nl,
+    write('Mon: 40min '), random_exercise(cardio, no_equipment, Exercise1), write(Exercise1), nl,
+    write('Tue: 4 sets * 15 '), random_exercise(strength, no_equipment, Exercise2), write(Exercise2), nl,
+    write('Wed: Rest day'), nl,
+    write('Thu: 4 sets * 15 '), random_exercise(strength, no_equipment, Exercise3), write(Exercise3), nl,
+    write('Fri: Rest day'), nl,
+    write('Sat: 40min '), random_exercise(cardio, no_equipment, Exercise4), write(Exercise4), nl,
+    write('Sun: Rest day'), nl.
 
 
 % weight_loss goal, beginner level, with equipment
@@ -175,7 +204,7 @@ generate_plan(muscle_and_strength_building, intermediate, equipment) :-
     write('Sat: 3 sets * 15 '), random_exercise(strength, equipment, Exercise4), write(Exercise4), nl,
     write('Sun: Rest day'), nl.
 
-% Logic for generating workout plan for weight_loss goal, advanced level, with equipment
+% weight_loss goal, advanced level, with equipment
 generate_plan(weight_loss, advanced, equipment) :-
     write('Weight-loss - Advanced - With Equipment'), nl,
     write('Mon: 40min '), random_exercise(cardio, equipment, Exercise1), write(Exercise1), nl,
@@ -186,7 +215,7 @@ generate_plan(weight_loss, advanced, equipment) :-
     write('Sat: 40min '), random_exercise(cardio, equipment, Exercise4), write(Exercise4), nl,
     write('Sun: Rest day'), nl.
 
-% Logic for generating workout plan for muscle_and_strength_building goal, advanced level, with equipment
+% muscle_and_strength_building goal, advanced level, with equipment
 generate_plan(muscle_and_strength_building, advanced, equipment) :-
     write('Muscle and Strength Building - Advanced - With Equipment'), nl,
     write('Mon: 4 sets * 15 '), random_exercise(strength, equipment, Exercise1), write(Exercise1), nl,
@@ -195,6 +224,36 @@ generate_plan(muscle_and_strength_building, advanced, equipment) :-
     write('Thu: 40min '), random_exercise(cardio, equipment, Exercise3), write(Exercise3), nl,
     write('Fri: Rest day'), nl,
     write('Sat: 4 sets * 15 '), random_exercise(strength, equipment, Exercise4), write(Exercise4), nl,
+    write('Sun: Rest day'), nl.
+% general_fitness , beginner , equipment
+generate_plan(general_fitness, beginner, equipment) :-
+    write('General Fitness - Beginner - Equipment'), nl,
+    write('Mon: 20min '), random_exercise(cardio, equipment, Exercise1), write(Exercise1), nl,
+    write('Tue: 2 sets * 15 '), random_exercise(strength, no_equipment, Exercise2), write(Exercise2), nl,
+    write('Wed: Rest day'), nl,
+    write('Thu: 2 sets * 15 '), random_exercise(strength, no_equipment, Exercise3), write(Exercise3), nl,
+    write('Fri: Rest day'), nl,
+    write('Sat: 20min '), random_exercise(cardio, equipment, Exercise4), write(Exercise4), nl,
+    write('Sun: Rest day'), nl.
+% general_fitness , intermediate , equipment
+generate_plan(general_fitness, intermediate, equipment) :-
+    write('General Fitness - Intermediate - Equipment'), nl,
+    write('Mon: 30min '), random_exercise(cardio, equipment, Exercise1), write(Exercise1), nl,
+    write('Tue: 3 sets * 15 '), random_exercise(strength, no_equipment, Exercise2), write(Exercise2), nl,
+    write('Wed: Rest day'), nl,
+    write('Thu: 3 sets * 15 '), random_exercise(strength, no_equipment, Exercise3), write(Exercise3), nl,
+    write('Fri: Rest day'), nl,
+    write('Sat: 30min '), random_exercise(cardio, equipment, Exercise4), write(Exercise4), nl,
+    write('Sun: Rest day'), nl.
+% general_fitness , advanced , equipment
+generate_plan(general_fitness, advanced, equipment) :-
+    write('General Fitness - Advanced - Equipment'), nl,
+    write('Mon: 40min '), random_exercise(cardio, equipment, Exercise1), write(Exercise1), nl,
+    write('Tue: 4 sets * 15 '), random_exercise(strength, no_equipment, Exercise2), write(Exercise2), nl,
+    write('Wed: Rest day'), nl,
+    write('Thu: 4 sets * 15 '), random_exercise(strength, no_equipment, Exercise3), write(Exercise3), nl,
+    write('Fri: Rest day'), nl,
+    write('Sat: 40min '), random_exercise(cardio, equipment, Exercise4), write(Exercise4), nl,
     write('Sun: Rest day'), nl.
 
 
